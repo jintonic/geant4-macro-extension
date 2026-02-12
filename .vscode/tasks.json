@@ -20,7 +20,7 @@
     {
       "label": "Git: Push Tags",
       "type": "shell",
-      "command": "git push origin master --tags",
+      "command": "git push origin HEAD --follow-tags",
       "group": "build",
       "problemMatcher": [],
       "presentation": {
