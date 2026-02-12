@@ -1,23 +1,49 @@
-# Geant4 Macro Extension
+This is a basic VS Code (and its derivatives) extension for Geant4 macro command files (with extension `.mac`).
 
 ## Features
 
-This is a basic VSCode extension for Geant4 UI command files (with extension `.mac`) which provides:
-
-- Syntax highlighting to distinguish between UI directories, functions, parameters, units and variables.
-- Autocompletion based on a set of base UI commands.
-- Adding custom UI commands from a Geant4 simulation output or explicitly in VSCode.
+- Syntax highlighting to distinguish between macro directories, functions, parameters, units and variables.
+- Autocompletion based on a set of base macro commands.
+- Adding custom macro commands from a Geant4 simulation output or explicitly in VS Code.
 - Type checking of command parameters.
 - Hover information for commands and directories.
 - A sidebar panel for finding commands, displaying information and adding them to your macro files.
 
 ## Installation
 
-The extension is available on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jjarchie.geant4-macro-extension).
+### Open VSX (Antigravity, VSCodium, Cursor, etc.)
+
+Search for **"Geant4 Macro"** in your editor's extension marketplace and click **Install**. This extension is hosted on the [Open VSX Registry][ovsx_page].
+
+### VS Code (Standard)
+
+Standard VS Code uses the Visual Studio Marketplace and does not search Open VSX by default. **VS Code users should use the [VSIX Installation](#vsix-installation) method below** or use the slightly outdated [original extension](https://github.com/Jjarchie/geant4-macro-extension) from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jjarchie.geant4-macro-extension).
+
+### VSIX Installation
+
+1. Obtain the `.vsix` file from this GitHub [Releases][].
+2. Install the `.vsix` file through your editor's **"Install from VSIX..."** command (found in the Extensions view `...` menu).
 
 ## Usage
 
 The extension will be activated when opening a file with the `.mac` extension.
+
+### 🛠 Troubleshooting: File Detection
+
+By default, VS Code may identify `.mac` files as Shell Scripts or AppleScript. If your Geant4 macros are not being correctly colorized, you can force the association in two ways:
+
+1. The Quick Fix (Single File)
+   - Click on the Language Mode in the Status Bar (bottom right corner, it likely says "Shell Script").
+   - Select "Configure File Association for '.mac'..." from the top of the list.
+   - Select "Geant4 Macro".
+2. The Permanent Fix (Global)
+   - Add the following to your settings.json (accessible via Ctrl+Shift+P -> Preferences: Open User Settings (JSON)):
+
+     ```json
+     "files.associations": {
+       "*.mac": "g4macro"
+     }
+     ```
 
 ### Syntax Highlighting
 
@@ -56,6 +82,7 @@ _Note: this extension does not currently support autocomplete for variables whic
 ### Adding Custom Commands
 
 Custom commands can be added several ways:
+
 1. Storing the output of `/control/manual /` in a text file and running `Geant4 Macro: Add Command File...` from the command palette.
 2. Running `Geant4 Macro: Add Command...` from the command palette and entering the command manually.
 3. Using the code action generated on commands which do not exist. This can be done by hovering over the command and clicking the lightbulb icon, or by using the shortcut `Ctrl+.` as shown below.
@@ -66,4 +93,7 @@ Command files can also be removed using the command pallette or by directly modi
 
 ## Feature Requests
 
-If you have any feature requests or issues, please open an issue on the [GitHub repository](https://github.com/Jjarchie/geant4-macro-extension/issues).
+If you have any feature requests or issues, please open an issue on the [GitHub repository](https://github.com/jintonic/geant4-macro-extension/issues). Or better yet, submit a pull request based on the [CONTRIBUTING.md](CONTRIBUTING.md) file!
+
+[ovsx_page]: https://open-vsx.org/extension/jintonic/g4macro
+[Releases]: https://github.com/jintonic/geant4-macro-extension/releases

@@ -2,9 +2,9 @@
   "name": "geant4-macro-extension",
   "displayName": "Geant4 Macro Extension",
   "description": "Syntax highlighting and auto-complete for Geant4 macro files",
-  "version": "0.4.1",
+  "version": "0.0.0",
   "icon": "images/icon.png",
-  "publisher": "Jjarchie",
+  "publisher": "jintonic",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -22,6 +22,10 @@
         "extensions": [
           ".mac"
         ],
+        "mimetypes": [
+          "text/geant4-macro"
+        ],
+        "firstLine": "^(\\s*#|/(run|control|vis|gun|gps|tracking|event|analysis|hits|process|geometry|physics_lists|particle)/)",
         "configuration": "./language-configuration.json",
         "icon": {
           "dark": "./images/geant4_logo_dark.svg",
@@ -102,13 +106,15 @@
         {
           "id": "geant4-macro-explorer",
           "name": "Command Explorer",
-          "when": "geant4-macro-extension:enableFullFeatureSet"
+          "when": "geant4-macro-extension:enableFullFeatureSet",
+          "icon": "$(list-tree)"
         },
         {
           "type": "webview",
           "id": "geant4-macro-active-command",
           "name": "Command",
-          "when": "geant4-macro-extension:enableFullFeatureSet"
+          "when": "geant4-macro-extension:enableFullFeatureSet",
+          "icon": "$(primitive-square)"
         }
       ]
     },
@@ -131,38 +137,48 @@
         }
       ],
       "view/item/context": [
-      {
-        "command": "geant4-macro-extension.insertCommand",
-        "when": "view == geant4-macro-explorer && viewItem == commandTreeItemNotDir",
-        "group": "inline"
-      }
-    ]
+        {
+          "command": "geant4-macro-extension.insertCommand",
+          "when": "view == geant4-macro-explorer && viewItem == commandTreeItemNotDir",
+          "group": "inline"
+        }
+      ]
     }
   },
   "activationEvents": [],
   "main": "./out/extension.js",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "format": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\"",
-    "watch": "tsc -watch -p ./"
+    "package": "vsce package",
+    "deploy": "ovsx publish",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/node": "^18",
     "@types/vscode": "^1.73.0",
-    "@typescript-eslint/eslint-plugin": "^7.14.0",
-    "@typescript-eslint/parser": "^7.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "@vscode/vsce": "^3.7.1",
     "eslint": "^8.26.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "ovsx": "^0.10.9",
+    "prettier": "^3.8.1",
     "typescript": "^5.5.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jjarchie/geant4-macro-extension"
+    "url": "https://github.com/jintonic/geant4-macro-extension"
   },
   "bugs": {
-      "url": "https://github.com/Jjarchie/geant4-macro-extension/issues"
+    "url": "https://github.com/jintonic/geant4-macro-extension/issues"
   },
-  "homepage": "https://github.com/Jjarchie/geant4-macro-extension#readme",
+  "homepage": "https://github.com/jintonic/geant4-macro-extension#readme",
   "keywords": [
     "geant4",
     "macro",
@@ -170,5 +186,14 @@
     "syntax",
     "highlighting",
     "autocomplete"
-  ]
+  ],
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
 }
