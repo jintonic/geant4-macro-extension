@@ -85,7 +85,7 @@ This repository is configured with a GitHub Action that automatically publishes 
     npm version patch -m "Release version %s"
     ```
 
-2.  **Push the changes and tags**: `git push origin main --tags`
+2.  **Push the changes and tags**: `git push origin master --tags`
 
     _Note: Ensure your working directory is clean before running `npm version`. This command will update [package.json](package.json), commit the change, and create an annotated tag for you._
 
