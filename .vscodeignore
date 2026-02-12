@@ -1,4 +1,10 @@
-.vscode/**
-.vscode-test/**
+.vscode
+.github
 .gitignore
-vsc-extension-quickstart.md
+src
+node_modules
+CONTRIBUTING.md
+tsconfig.json
+.eslintrc.js
+.prettierrc
+images/*.gif
