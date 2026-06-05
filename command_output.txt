@@ -11960,6 +11960,11 @@ Trajectory model commands.
 
  Sub-directories : 
    /vis/modeling/trajectories/create/   Create trajectory models and messengers.
+   /vis/modeling/trajectories/drawByAttribute-0/   Commands for drawByAttribute-0 model.
+   /vis/modeling/trajectories/drawByCharge-0/   Commands for drawByCharge-0 model.
+   /vis/modeling/trajectories/drawByEncounteredVolume-0/   Commands for drawByEncounteredVolume-0 model.
+   /vis/modeling/trajectories/drawByOriginVolume-0/   Commands for drawByOriginVolume-0 model.
+   /vis/modeling/trajectories/drawByParticleID-0/   Commands for drawByParticleID-0 model.
  Commands : 
    list * List objects registered with list manager
    select * Select created object
@@ -12062,6 +12067,1904 @@ Generated model becomes current.
 Parameter : model-name
  Parameter type  : s
  Omittable       : True
+
+Command directory path : /vis/modeling/trajectories/drawByAttribute-0/
+
+
+Guidance :
+Commands for drawByAttribute-0 model.
+
+ Sub-directories : 
+   /vis/modeling/trajectories/drawByAttribute-0/default/   Commands for default configuration
+ Commands : 
+   addInterval * Add interval.
+   addValue * Add value.
+   setAttribute * Set command
+   verbose * Verbose command
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/addInterval
+Guidance :
+Add interval.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/addValue
+Guidance :
+Add value.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/setAttribute
+Guidance :
+Set command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/verbose
+Guidance :
+Verbose command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+Command directory path : /vis/modeling/trajectories/drawByAttribute-0/default/
+
+
+Guidance :
+Commands for default configuration
+
+ Sub-directories : 
+ Commands : 
+   setAuxPtsColour * Set colour through a string
+   setAuxPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setAuxPtsFillStyle * Set auxiliary fill style.
+   setAuxPtsSize * Set auxiliary points size command
+   setAuxPtsSizeType * Set auxiliary size type.
+   setAuxPtsType * Set auxiliary points type.
+   setAuxPtsVisible * Set auxiliary points visibility command
+   setDrawAuxPts * Set draw auxiliary points command
+   setDrawLine * Set draw line command
+   setDrawStepPts * Set draw step points command
+   setLineColour * Set colour through a string
+   setLineColourRGBA * Set colour through red, green, blue and alpha components
+   setLineVisible * Set line visibility command
+   setLineWidth * ...Title not available...
+   setStepPtsColour * Set colour through a string
+   setStepPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setStepPtsFillStyle * Set step fill style type.
+   setStepPtsSize * Set step points size command
+   setStepPtsSizeType * Set step size type.
+   setStepPtsType * Set step points type.
+   setStepPtsVisible * Set step points visible command
+   setTimeSliceInterval * Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsFillStyle
+Guidance :
+Set auxiliary fill style.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsSize
+Guidance :
+Set auxiliary points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsSizeType
+Guidance :
+Set auxiliary size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsType
+Guidance :
+Set auxiliary points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setAuxPtsVisible
+Guidance :
+Set auxiliary points visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setDrawAuxPts
+Guidance :
+Set draw auxiliary points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setDrawLine
+Guidance :
+Set draw line command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setDrawStepPts
+Guidance :
+Set draw step points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setLineColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setLineColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setLineVisible
+Guidance :
+Set line visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setLineWidth
+Guidance :
+
+Parameter : Double
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsFillStyle
+Guidance :
+Set step fill style type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsSize
+Guidance :
+Set step points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsSizeType
+Guidance :
+Set step size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsType
+Guidance :
+Set step points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setStepPtsVisible
+Guidance :
+Set step points visible command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByAttribute-0/default/setTimeSliceInterval
+Guidance :
+Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+Parameter : DoubleAndUnit
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Unit
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : s ms us ns ps min h d y second millisecond microsecond nanosecond picosecond minute hour day year
+
+Command directory path : /vis/modeling/trajectories/drawByCharge-0/
+
+
+Guidance :
+Commands for drawByCharge-0 model.
+
+ Sub-directories : 
+   /vis/modeling/trajectories/drawByCharge-0/default/   Commands for default configuration
+ Commands : 
+   set * Set variable colour through a string
+   setRGBA * Set variable colour through red, green, blue and alpha components
+   verbose * Verbose command
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/set
+Guidance :
+Set variable colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Value
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/setRGBA
+Guidance :
+Set variable colour through red, green, blue and alpha components
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/verbose
+Guidance :
+Verbose command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+Command directory path : /vis/modeling/trajectories/drawByCharge-0/default/
+
+
+Guidance :
+Commands for default configuration
+
+ Sub-directories : 
+ Commands : 
+   setAuxPtsColour * Set colour through a string
+   setAuxPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setAuxPtsFillStyle * Set auxiliary fill style.
+   setAuxPtsSize * Set auxiliary points size command
+   setAuxPtsSizeType * Set auxiliary size type.
+   setAuxPtsType * Set auxiliary points type.
+   setAuxPtsVisible * Set auxiliary points visibility command
+   setDrawAuxPts * Set draw auxiliary points command
+   setDrawLine * Set draw line command
+   setDrawStepPts * Set draw step points command
+   setLineColour * Set colour through a string
+   setLineColourRGBA * Set colour through red, green, blue and alpha components
+   setLineVisible * Set line visibility command
+   setLineWidth * ...Title not available...
+   setStepPtsColour * Set colour through a string
+   setStepPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setStepPtsFillStyle * Set step fill style type.
+   setStepPtsSize * Set step points size command
+   setStepPtsSizeType * Set step size type.
+   setStepPtsType * Set step points type.
+   setStepPtsVisible * Set step points visible command
+   setTimeSliceInterval * Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsFillStyle
+Guidance :
+Set auxiliary fill style.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsSize
+Guidance :
+Set auxiliary points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsSizeType
+Guidance :
+Set auxiliary size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsType
+Guidance :
+Set auxiliary points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setAuxPtsVisible
+Guidance :
+Set auxiliary points visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setDrawAuxPts
+Guidance :
+Set draw auxiliary points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setDrawLine
+Guidance :
+Set draw line command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts
+Guidance :
+Set draw step points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setLineColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setLineColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setLineVisible
+Guidance :
+Set line visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setLineWidth
+Guidance :
+
+Parameter : Double
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsFillStyle
+Guidance :
+Set step fill style type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize
+Guidance :
+Set step points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSizeType
+Guidance :
+Set step size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsType
+Guidance :
+Set step points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setStepPtsVisible
+Guidance :
+Set step points visible command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByCharge-0/default/setTimeSliceInterval
+Guidance :
+Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+Parameter : DoubleAndUnit
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Unit
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : s ms us ns ps min h d y second millisecond microsecond nanosecond picosecond minute hour day year
+
+Command directory path : /vis/modeling/trajectories/drawByEncounteredVolume-0/
+
+
+Guidance :
+Commands for drawByEncounteredVolume-0 model.
+
+ Sub-directories : 
+   /vis/modeling/trajectories/drawByEncounteredVolume-0/default/   Commands for default configuration
+ Commands : 
+   set * Set variable colour through a string
+   setDefault * Set colour through a string
+   setDefaultRGBA * Set colour through red, green, blue and alpha components
+   setRGBA * Set variable colour through red, green, blue and alpha components
+   verbose * Verbose command
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/set
+Guidance :
+Set variable colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Value
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/setDefault
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/setDefaultRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/setRGBA
+Guidance :
+Set variable colour through red, green, blue and alpha components
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/verbose
+Guidance :
+Verbose command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+Command directory path : /vis/modeling/trajectories/drawByEncounteredVolume-0/default/
+
+
+Guidance :
+Commands for default configuration
+
+ Sub-directories : 
+ Commands : 
+   setAuxPtsColour * Set colour through a string
+   setAuxPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setAuxPtsFillStyle * Set auxiliary fill style.
+   setAuxPtsSize * Set auxiliary points size command
+   setAuxPtsSizeType * Set auxiliary size type.
+   setAuxPtsType * Set auxiliary points type.
+   setAuxPtsVisible * Set auxiliary points visibility command
+   setDrawAuxPts * Set draw auxiliary points command
+   setDrawLine * Set draw line command
+   setDrawStepPts * Set draw step points command
+   setLineColour * Set colour through a string
+   setLineColourRGBA * Set colour through red, green, blue and alpha components
+   setLineVisible * Set line visibility command
+   setLineWidth * ...Title not available...
+   setStepPtsColour * Set colour through a string
+   setStepPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setStepPtsFillStyle * Set step fill style type.
+   setStepPtsSize * Set step points size command
+   setStepPtsSizeType * Set step size type.
+   setStepPtsType * Set step points type.
+   setStepPtsVisible * Set step points visible command
+   setTimeSliceInterval * Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsFillStyle
+Guidance :
+Set auxiliary fill style.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsSize
+Guidance :
+Set auxiliary points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsSizeType
+Guidance :
+Set auxiliary size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsType
+Guidance :
+Set auxiliary points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setAuxPtsVisible
+Guidance :
+Set auxiliary points visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setDrawAuxPts
+Guidance :
+Set draw auxiliary points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setDrawLine
+Guidance :
+Set draw line command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setDrawStepPts
+Guidance :
+Set draw step points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setLineColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setLineColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setLineVisible
+Guidance :
+Set line visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setLineWidth
+Guidance :
+
+Parameter : Double
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsFillStyle
+Guidance :
+Set step fill style type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsSize
+Guidance :
+Set step points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsSizeType
+Guidance :
+Set step size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsType
+Guidance :
+Set step points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setStepPtsVisible
+Guidance :
+Set step points visible command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByEncounteredVolume-0/default/setTimeSliceInterval
+Guidance :
+Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+Parameter : DoubleAndUnit
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Unit
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : s ms us ns ps min h d y second millisecond microsecond nanosecond picosecond minute hour day year
+
+Command directory path : /vis/modeling/trajectories/drawByOriginVolume-0/
+
+
+Guidance :
+Commands for drawByOriginVolume-0 model.
+
+ Sub-directories : 
+   /vis/modeling/trajectories/drawByOriginVolume-0/default/   Commands for default configuration
+ Commands : 
+   set * Set variable colour through a string
+   setDefault * Set colour through a string
+   setDefaultRGBA * Set colour through red, green, blue and alpha components
+   setRGBA * Set variable colour through red, green, blue and alpha components
+   verbose * Verbose command
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/set
+Guidance :
+Set variable colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Value
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/setDefault
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/setDefaultRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/setRGBA
+Guidance :
+Set variable colour through red, green, blue and alpha components
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/verbose
+Guidance :
+Verbose command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+Command directory path : /vis/modeling/trajectories/drawByOriginVolume-0/default/
+
+
+Guidance :
+Commands for default configuration
+
+ Sub-directories : 
+ Commands : 
+   setAuxPtsColour * Set colour through a string
+   setAuxPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setAuxPtsFillStyle * Set auxiliary fill style.
+   setAuxPtsSize * Set auxiliary points size command
+   setAuxPtsSizeType * Set auxiliary size type.
+   setAuxPtsType * Set auxiliary points type.
+   setAuxPtsVisible * Set auxiliary points visibility command
+   setDrawAuxPts * Set draw auxiliary points command
+   setDrawLine * Set draw line command
+   setDrawStepPts * Set draw step points command
+   setLineColour * Set colour through a string
+   setLineColourRGBA * Set colour through red, green, blue and alpha components
+   setLineVisible * Set line visibility command
+   setLineWidth * ...Title not available...
+   setStepPtsColour * Set colour through a string
+   setStepPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setStepPtsFillStyle * Set step fill style type.
+   setStepPtsSize * Set step points size command
+   setStepPtsSizeType * Set step size type.
+   setStepPtsType * Set step points type.
+   setStepPtsVisible * Set step points visible command
+   setTimeSliceInterval * Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsFillStyle
+Guidance :
+Set auxiliary fill style.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsSize
+Guidance :
+Set auxiliary points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsSizeType
+Guidance :
+Set auxiliary size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsType
+Guidance :
+Set auxiliary points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setAuxPtsVisible
+Guidance :
+Set auxiliary points visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setDrawAuxPts
+Guidance :
+Set draw auxiliary points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setDrawLine
+Guidance :
+Set draw line command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setDrawStepPts
+Guidance :
+Set draw step points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setLineColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setLineColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setLineVisible
+Guidance :
+Set line visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setLineWidth
+Guidance :
+
+Parameter : Double
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsFillStyle
+Guidance :
+Set step fill style type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsSize
+Guidance :
+Set step points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsSizeType
+Guidance :
+Set step size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsType
+Guidance :
+Set step points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setStepPtsVisible
+Guidance :
+Set step points visible command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByOriginVolume-0/default/setTimeSliceInterval
+Guidance :
+Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+Parameter : DoubleAndUnit
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Unit
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : s ms us ns ps min h d y second millisecond microsecond nanosecond picosecond minute hour day year
+
+Command directory path : /vis/modeling/trajectories/drawByParticleID-0/
+
+
+Guidance :
+Commands for drawByParticleID-0 model.
+
+ Sub-directories : 
+   /vis/modeling/trajectories/drawByParticleID-0/default/   Commands for default configuration
+ Commands : 
+   set * Set variable colour through a string
+   setDefault * Set colour through a string
+   setDefaultRGBA * Set colour through red, green, blue and alpha components
+   setRGBA * Set variable colour through red, green, blue and alpha components
+   verbose * Verbose command
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/set
+Guidance :
+Set variable colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Value
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/setDefault
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/setDefaultRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/setRGBA
+Guidance :
+Set variable colour through red, green, blue and alpha components
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/verbose
+Guidance :
+Verbose command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+Command directory path : /vis/modeling/trajectories/drawByParticleID-0/default/
+
+
+Guidance :
+Commands for default configuration
+
+ Sub-directories : 
+ Commands : 
+   setAuxPtsColour * Set colour through a string
+   setAuxPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setAuxPtsFillStyle * Set auxiliary fill style.
+   setAuxPtsSize * Set auxiliary points size command
+   setAuxPtsSizeType * Set auxiliary size type.
+   setAuxPtsType * Set auxiliary points type.
+   setAuxPtsVisible * Set auxiliary points visibility command
+   setDrawAuxPts * Set draw auxiliary points command
+   setDrawLine * Set draw line command
+   setDrawStepPts * Set draw step points command
+   setLineColour * Set colour through a string
+   setLineColourRGBA * Set colour through red, green, blue and alpha components
+   setLineVisible * Set line visibility command
+   setLineWidth * ...Title not available...
+   setStepPtsColour * Set colour through a string
+   setStepPtsColourRGBA * Set colour through red, green, blue and alpha components
+   setStepPtsFillStyle * Set step fill style type.
+   setStepPtsSize * Set step points size command
+   setStepPtsSizeType * Set step size type.
+   setStepPtsType * Set step points type.
+   setStepPtsVisible * Set step points visible command
+   setTimeSliceInterval * Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsFillStyle
+Guidance :
+Set auxiliary fill style.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsSize
+Guidance :
+Set auxiliary points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsSizeType
+Guidance :
+Set auxiliary size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsType
+Guidance :
+Set auxiliary points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setAuxPtsVisible
+Guidance :
+Set auxiliary points visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setDrawAuxPts
+Guidance :
+Set draw auxiliary points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setDrawLine
+Guidance :
+Set draw line command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts
+Guidance :
+Set draw step points command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setLineColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setLineColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setLineVisible
+Guidance :
+Set line visibility command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setLineWidth
+Guidance :
+
+Parameter : Double
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsColour
+Guidance :
+Set colour through a string
+
+Parameter : Variable
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsColourRGBA
+Guidance :
+Set colour through red, green, blue and alpha components
+Four inputs are expected.
+
+Parameter : Red component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Green component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Blue component
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Alpha component
+ Parameter type  : d
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsFillStyle
+Guidance :
+Set step fill style type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : noFill hashed filled
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSize
+Guidance :
+Set step points size command
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSizeType
+Guidance :
+Set step size type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : none world screen
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsType
+Guidance :
+Set step points type.
+
+Parameter : 
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : dots circles squares
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsVisible
+Guidance :
+Set step points visible command
+
+Parameter : Bool
+ Parameter type  : b
+ Omittable       : False
+
+
+Command /vis/modeling/trajectories/drawByParticleID-0/default/setTimeSliceInterval
+Guidance :
+Set time slice interval.  Give unit, e.g., "0.1 ns"
+
+Parameter : DoubleAndUnit
+ Parameter type  : d
+ Omittable       : False
+
+Parameter : Unit
+ Parameter type  : s
+ Omittable       : False
+ Candidates      : s ms us ns ps min h d y second millisecond microsecond nanosecond picosecond minute hour day year
 
 Command directory path : /vis/multithreading/
 
