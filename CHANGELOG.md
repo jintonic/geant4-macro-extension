@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2026-06-05
+
+Avoided throwing some false error messages.
+
+### Added
+
+- Added more macro commands to [command_output.txt](command_output.txt) to avoid error messages about them
+  - /vis/modeling/trajectories/drawByAttribute-0/
+  - /vis/modeling/trajectories/drawByCharge-0/
+  - /vis/modeling/trajectories/drawByEncounteredVolume-0/
+  - /vis/modeling/trajectories/drawByOriginVolume-0/
+  - /vis/modeling/trajectories/drawByParticleID-0/
+
+### Changed
+
+- Bumped version to 1.1.0.
+- Bumped dev dependencies to latest versions.
+- changed counting method for string parameters in [src/g4macrocommands.ts](src/g4macrocommands.ts) to avoid throwing error messages like "too many parameters".
+
 ## [1.0.0] - 2026-02-12
 
 Forked from <https://github.com/Jjarchie/geant4-macro-extension> to publish to [OVSX](https://open-vsx.org/)
@@ -16,7 +35,7 @@ Forked from <https://github.com/Jjarchie/geant4-macro-extension> to publish to [
 
 ### Added
 
-- Added more macro commands to [command_output.md](command_output.md) using [GEARS][] on Geant4 11.4.0.
+- Added more macro commands to [command_output.txt](command_output.txt) using [GEARS][] on Geant4 11.4.0.
 - Added `mimetype` and `firstLine` to language configuration in [package.json](package.json) to improve language auto-detection.
 - Added "Troubleshooting" section to [README.md](README.md) regarding language auto-detection.
 - Added icons for the sidebar views in [package.json](package.json).
