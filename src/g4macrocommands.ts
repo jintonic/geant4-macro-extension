@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import { Command } from './command_reader';
-import { start } from 'repl';
 
 // Possible units that can be used
 const units = [
@@ -165,6 +164,14 @@ interface InputParameterInfo {
   end_idx: number;
 }
 
+interface Parameter {
+  name: string;
+  type: string;
+  omittable: boolean;
+  default: string;
+  candidates?: string[];
+}
+
 export interface Variable {
   name: string;
   value: any;
@@ -193,24 +200,50 @@ export class g4macrocommands {
    * @param line - The line of text to extract the parameters from.
    * @returns An array of InputParameterInfo objects for each input parameter.
    */
-  public getInputParameters(line: string): Array<InputParameterInfo> {
-    // Initialise the array
+  public getInputParameters(
+    line: string,
+    commandParameters: Parameter[] = [],
+  ): InputParameterInfo[] {
     const parameters: InputParameterInfo[] = [];
-
-    // The regex for getting the parameters
     const regex = /"([^"]*)"|\S+/g;
 
-    // Skip the first token (the command)
+    // Skip the command token
     let match = regex.exec(line);
+    if (!match) return parameters;
 
-    // Get all subsequent tokens
+    let paramIndex = 0;
     while ((match = regex.exec(line)) !== null) {
-      // Add to the parameters list
-      const thisMatch = match[0];
-      const start = match.index;
-      const end = start + thisMatch.length;
+      if (paramIndex >= commandParameters.length) {
+        parameters.push({
+          parameter: match[0],
+          start_idx: match.index,
+          end_idx: match.index + match[0].length,
+        });
+        continue;
+      }
 
-      parameters.push({ parameter: thisMatch, start_idx: start, end_idx: end });
+      const expected = commandParameters[paramIndex];
+
+      if (paramIndex === commandParameters.length - 1 && expected.type === 's') {
+        const remainderStart = match.index;
+        const remainder = line.slice(remainderStart).trimStart();
+        const leadingWs = line.slice(remainderStart).match(/^\s*/)?.[0] ?? '';
+        const actualStart = remainderStart + leadingWs.length;
+        parameters.push({
+          parameter: line.slice(actualStart),
+          start_idx: actualStart,
+          end_idx: line.length,
+        });
+        break;
+      }
+
+      parameters.push({
+        parameter: match[0],
+        start_idx: match.index,
+        end_idx: match.index + match[0].length,
+      });
+
+      paramIndex++;
     }
 
     return parameters;
@@ -377,15 +410,11 @@ export class g4macrocommands {
 
     for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
       const line = doc.lineAt(lineIndex);
-      let lineOfText = line.text;
-
-      // Get the line up to the first comment
-      const commentIdx = lineOfText.indexOf('#');
-
-      if (commentIdx != -1) lineOfText = lineOfText.substring(0, commentIdx);
+      const { text: lineOfText, endLine } = this.getLogicalLine(doc, lineIndex);
+      lineIndex = endLine;
 
       // Skip if this line does not contain commands
-      if (lineOfText[0] != '/') continue;
+      if (lineOfText.length == 0 || lineOfText[0] != '/') continue;
 
       if (lineOfText.length <= 1) continue;
 
@@ -405,7 +434,7 @@ export class g4macrocommands {
       }
 
       // Get the current parameters
-      const currentParameters = this.getInputParameters(lineOfText);
+      const currentParameters = this.getInputParameters(lineOfText, lineCommand.parameters);
       const currentCommandParameters = lineCommand.parameters;
 
       // Check if there are too few arguments
@@ -503,19 +532,18 @@ export class g4macrocommands {
 
     for (let i = 0; i < toFill.length; ++i) {
       // Add to the start index stack
-      if (toFill.at(i) == '{') startIndices.push(i);
+      if (toFill[i] == '{') startIndices.push(i);
 
       // Skip if not at the end
-      if (toFill.at(i) != '}') continue;
+      if (toFill[i] != '}') continue;
 
       // Mis-match in indices of "{" and "}". Do not continue.
       if (startIndices.length == 0) {
-        console.log('Mismatch in braces in parameter string!');
         return toFill;
       }
 
       // Get the last substring
-      const startIdx = startIndices.at(-1)!;
+      const startIdx = startIndices[startIndices.length - 1]!;
       const varName = toFill.substring(startIdx + 1, i);
 
       const variable = this.getVariable(varName);
@@ -643,10 +671,8 @@ export class g4macrocommands {
 
     for (const additionalCommand of additionalCommands) this.commands.addCommand(additionalCommand);
 
-    console.log('commands refreshed!');
-
     for (const child of this.commands.children) {
-      console.log(child);
+      // intentionally empty to keep command enumeration logic if needed
     }
 
     this.sortCommands();
@@ -668,5 +694,28 @@ export class g4macrocommands {
     vscode.workspace
       .getConfiguration('geant4-macro-extension')
       .update('additionalCommands', configuration, vscode.ConfigurationTarget.Workspace);
+  }
+
+  private getLogicalLine(
+    doc: vscode.TextDocument,
+    startLine: number,
+  ): { text: string; endLine: number } {
+    let text = '';
+    let lineIndex = startLine;
+
+    while (lineIndex < doc.lineCount) {
+      let raw = doc.lineAt(lineIndex).text;
+      const commentIdx = raw.indexOf('#');
+      if (commentIdx !== -1) raw = raw.substring(0, commentIdx);
+
+      if (text.length > 0) text += ' ';
+      text += raw.trimEnd();
+
+      if (!raw.trimEnd().endsWith('\\')) break;
+      text = text.slice(0, -1);
+      lineIndex++;
+    }
+
+    return { text, endLine: lineIndex };
   }
 }
